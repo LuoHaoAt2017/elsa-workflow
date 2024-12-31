@@ -1,0 +1,27 @@
+﻿<Window x:Class="DownloadCenter.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DownloadCenter"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <StackPanel>
+            <TextBox x:Name="textBoxName" Margin="5" BorderBrush="Black"></TextBox>
+            <TextBox Margin="5" BorderBrush="Black" Text="{Binding Path=Value, ElementName=slider}"></TextBox>
+            <Slider x:Name="slider" Margin="5" Minimum="0" Maximum="100"></Slider>
+            <TextBox x:Name="studentBox" Margin="5" BorderBrush="Black"></TextBox>
+            <TextBox Margin="5" BorderBrush="Black" Text="{Binding Path=Text.Length, ElementName=studentBox, Mode=OneWay}"></TextBox>
+            <Button Content="Add Age" Margin="5" Click="Button_Click"></Button>
+            <TextBlock Text="集合元素中的第一个元素作为默认值 【Tim, Tom, Blog】"></TextBlock>
+            <TextBox x:Name="textBoxName2" Margin="5" BorderBrush="Black"></TextBox>
+            <TextBox x:Name="textBoxName3" Margin="5" BorderBrush="Black"></TextBox>
+            <TextBox x:Name="textBoxName4" Margin="5" BorderBrush="Black"></TextBox>
+            <TextBlock Text="嵌套集合"></TextBlock>
+            <TextBox x:Name="textBoxName5" Margin="5" BorderBrush="Black"></TextBox>
+            <TextBox x:Name="textBoxName6" Margin="5" BorderBrush="Black"></TextBox>
+            <TextBox x:Name="textBoxName7" Margin="5" BorderBrush="Black"></TextBox>
+        </StackPanel>
+    </Grid>
+</Window>
