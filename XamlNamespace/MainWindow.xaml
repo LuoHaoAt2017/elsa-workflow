@@ -6,7 +6,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:XamlNamespace"
         mc:Ignorable="d"
-        Title="MainWindow" Height="600" Width="800">
+        Title="MainWindow" Height="800" Width="800">
     <Window.Resources>
         <sys:String x:Key="greeting">Hello WPF</sys:String>
         <local:Human x:Key="human" Child="ABC"></local:Human>
@@ -69,5 +69,11 @@
             Padding="5" 
             Margin="10">
         </Button>
+        <Slider x:Name="mySlider" Minimum="0" Maximum="100"  Margin="10"></Slider>
+        <TextBox Margin="10" Padding="5">
+            <TextBox.Text>
+                <Binding Path="Value" ElementName="mySlider" Mode="OneWay"></Binding>
+            </TextBox.Text>
+        </TextBox>
     </StackPanel>
 </Window>
